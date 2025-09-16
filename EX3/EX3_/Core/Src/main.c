@@ -49,34 +49,29 @@
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 /* USER CODE BEGIN PFP */
-// Mã hiển thị 0–9 cho 7SEG common-anode (PB0=a, PB1=b, ..., PB6=g)
-const uint8_t segCode[10] = {
-    0b0000001, // 0
-    0b1001111, // 1
-    0b0010010, // 2
-    0b0000110, // 3
-    0b1001100, // 4
-    0b0100100, // 5
-    0b0100000, // 6
-    0b0001111, // 7
+static const uint8_t segCode[10] = {
+    0b1000000, // 0
+    0b1111001, // 1
+    0b0100100, // 2
+    0b0110000, // 3
+    0b0011001, // 4
+    0b0010010, // 5
+    0b0000010, // 6
+    0b1111000, // 7
     0b0000000, // 8
-    0b0000100  // 9
+    0b0010000  // 9
 };
-void display7SEG(int num)
-{
-    if (num < 0 || num > 9) return; // chỉ hiển thị số 0–9
 
-    uint8_t code = segCode[num];
+void display7SEG(int num) {
+    if (num < 0 || num > 9) num = 0;
 
-    // Xuất ra PB0..PB6
-    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, (code & 0x01) ? GPIO_PIN_SET : GPIO_PIN_RESET);
-    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, (code & 0x02) ? GPIO_PIN_SET : GPIO_PIN_RESET);
-    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, (code & 0x04) ? GPIO_PIN_SET : GPIO_PIN_RESET);
-    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_3, (code & 0x08) ? GPIO_PIN_SET : GPIO_PIN_RESET);
-    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_4, (code & 0x10) ? GPIO_PIN_SET : GPIO_PIN_RESET);
-    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, (code & 0x20) ? GPIO_PIN_SET : GPIO_PIN_RESET);
-    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, (code & 0x40) ? GPIO_PIN_SET : GPIO_PIN_RESET);
+    for (int i = 0; i < 7; i++) {
+        HAL_GPIO_WritePin(GPIOB, (1 << i),
+            (segCode[num] & (1 << i)) ? GPIO_PIN_SET : GPIO_PIN_RESET);
+    }
 }
+
+
 
 /* USER CODE END PFP */
 
@@ -119,8 +114,11 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  int counter=9	;
   while (1)
-  {
+  {if (counter <0) counter =9;
+  display7SEG(counter--);
+  HAL_Delay(1000);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -182,7 +180,7 @@ static void MX_GPIO_Init(void)
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3
-                          |GPIO_PIN_4|GPIO_PIN_5, GPIO_PIN_RESET);
+                          |GPIO_PIN_4|GPIO_PIN_5|GPIO_PIN_6, GPIO_PIN_RESET);
 
   /*Configure GPIO pins : RED1_Pin YELLOW1_Pin GREEN1_Pin RED2_Pin
                            YELLOW2_Pin GREEN2_Pin */
@@ -194,9 +192,9 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /*Configure GPIO pins : PB0 PB1 PB2 PB3
-                           PB4 PB5 */
+                           PB4 PB5 PB6 */
   GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3
-                          |GPIO_PIN_4|GPIO_PIN_5;
+                          |GPIO_PIN_4|GPIO_PIN_5|GPIO_PIN_6;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
