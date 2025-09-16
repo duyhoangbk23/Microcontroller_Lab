@@ -49,28 +49,6 @@
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 /* USER CODE BEGIN PFP */
-static const uint8_t segCode[10] = {
-    0b1000000, // 0
-    0b1111001, // 1
-    0b0100100, // 2
-    0b0110000, // 3
-    0b0011001, // 4
-    0b0010010, // 5
-    0b0000010, // 6
-    0b1111000, // 7
-    0b0000000, // 8
-    0b0010000  // 9
-};
-
-void display7SEG(int num) {
-    if (num < 0 || num > 9) num = 0;
-
-    for (int i = 0; i < 7; i++) {
-        HAL_GPIO_WritePin(GPIOB, (1 << i),
-            (segCode[num] & (1 << i)) ? GPIO_PIN_SET : GPIO_PIN_RESET);
-    }
-}
-
 
 
 /* USER CODE END PFP */
@@ -109,19 +87,73 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
+  static const uint8_t segCode[10] = {
+      0b1000000, // 0
+      0b1111001, // 1
+      0b0100100, // 2
+      0b0110000, // 3
+      0b0011001, // 4
+      0b0010010, // 5
+      0b0000010, // 6
+      0b1111000, // 7
+      0b0000000, // 8
+      0b0010000  // 9
+  };
+
+  void display7SEG(int num) {
+      if (num < 0 || num > 9) num = 0;
+
+      for (int i = 0; i < 7; i++) {
+          HAL_GPIO_WritePin(GPIOB, (1 << i),
+              (segCode[num] & (1 << i)) ? GPIO_PIN_SET : GPIO_PIN_RESET);
+      }
+  }
 
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  int counter=9	;
+  int counter = 9;
+  int phase = 0;  // 0: Road1 RED, Road2 GREEN->YELLOW
+                  // 1: Road2 RED, Road1 GREEN->YELLOW
+
   while (1)
-  {if (counter <0) counter =9;
-  display7SEG(counter--);
-  HAL_Delay(1000);
+  {
+      display7SEG(counter);
+
+      // Reset all LEDs first
+      HAL_GPIO_WritePin(GPIOA, RED1_Pin|YELLOW1_Pin|GREEN1_Pin|
+                               RED2_Pin|YELLOW2_Pin|GREEN2_Pin, GPIO_PIN_RESET);
+
+      if (phase == 0) {
+          // Road1 always RED
+          HAL_GPIO_WritePin(GPIOA, RED1_Pin, GPIO_PIN_SET);
+
+          if (counter > 4) HAL_GPIO_WritePin(GPIOA, GREEN2_Pin, GPIO_PIN_SET);    // Green
+          else if (counter > 1) HAL_GPIO_WritePin(GPIOA, YELLOW2_Pin, GPIO_PIN_SET); // Yellow
+          else HAL_GPIO_WritePin(GPIOA, RED2_Pin, GPIO_PIN_SET);                  // Switch RED
+      } else {
+          // Road2 always RED
+          HAL_GPIO_WritePin(GPIOA, RED2_Pin, GPIO_PIN_SET);
+
+          if (counter > 4) HAL_GPIO_WritePin(GPIOA, GREEN1_Pin, GPIO_PIN_SET);    // Green
+          else if (counter > 1) HAL_GPIO_WritePin(GPIOA, YELLOW1_Pin, GPIO_PIN_SET); // Yellow
+          else HAL_GPIO_WritePin(GPIOA, RED1_Pin, GPIO_PIN_SET);                  // Switch RED
+      }
+
+      HAL_Delay(1000);
+
+      // Countdown
+      if (counter <= 0) {
+          counter = 9;
+          phase = !phase; // change road
+      } else {
+          counter--;
+      }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+
   }
   /* USER CODE END 3 */
 }
