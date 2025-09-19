@@ -64,8 +64,8 @@ all: main-build
 main-build: EX3_.elf secondary-outputs
 
 # Tool invocations
-EX3_.elf: $(OBJS) $(USER_OBJS) D:\ADUY\251\VXL_VDK\Lab\EX3\EX3_\STM32F103C6UX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "EX3_.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\ADUY\251\VXL_VDK\Lab\EX3\EX3_\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="EX3_.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+EX3_.elf: $(OBJS) $(USER_OBJS) D:\ADUY\251\VXL_VDK\Lab\EX3_5\EX3_5\STM32F103C6UX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "EX3_.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\ADUY\251\VXL_VDK\Lab\EX3_5\EX3_5\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="EX3_.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
