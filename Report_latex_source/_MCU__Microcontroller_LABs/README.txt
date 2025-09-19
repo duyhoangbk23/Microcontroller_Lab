@@ -1,1 +1,0 @@
-Spend time writing report with latex on VScode is insane
