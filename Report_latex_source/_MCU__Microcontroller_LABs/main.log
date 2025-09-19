@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.11)  19 SEP 2025 12:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.11)  19 SEP 2025 14:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1776,8 +1776,9 @@ Package biblatex Info: Automatic encoding selection.
 \openout3 = `main.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'main.bbl' found.
- (main.bbl)
+Package biblatex Info: ... file 'main.bbl' not found.
+
+No file main.bbl.
 Package biblatex Info: Reference section=0 on input line 158.
 Package biblatex Info: Reference segment=0 on input line 158.
 \symgns@font=\mathgroup10
@@ -1808,13 +1809,324 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
 Package hyperref Info: Link coloring OFF on input line 158.
- (main.out) (main.out
-! I can't write on file `main.pdf'.
-(Press Enter to retry, or Control-C to exit; default file extension is `.pdf')
-Please type another file name for output: 
-! I can't write on file `main.pdf'.
-(Press Enter to retry, or Control-C to exit; default file extension is `.pdf')
-Please type another file name for output: main
-! I can't write on file `main.pdf'.
-(Press Enter to retry, or Control-C to exit; default file extension is `.pdf')
-Please type another file name for output: 
+ (main.out) (main.out)
+\@outlinefile=\write5
+\openout5 = `main.out'.
+
+\c@lstlisting=\count504
+ (preamble.tex)
+<source/picture/cover.png, id=54, 542.025pt x 782.925pt>
+File: source/picture/cover.png Graphic file (type png)
+<use source/picture/cover.png>
+Package pdftex.def Info: source/picture/cover.png  used on input line 179.
+(pdftex.def)             Requested size: 597.52782pt x 845.09245pt.
+ [1
+
+{C:/Users/ANH DUY/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/AN
+H DUY/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/vntex/t5.enc} <./source/pic
+ture/cover.png>] [2
+
+] (main.toc
+LaTeX Font Info:    Trying to load font information for FML+futmi on input line
+ 2.
+
+(C:\Users\ANH DUY\AppData\Local\Programs\MiKTeX\tex/latex/fourier\fmlfutmi.fd
+File: fmlfutmi.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futmi.
+)
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 11.03998pt on input line 2.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 8.27998pt on input line 2.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 6.43999pt on input line 2.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 11.03998pt on input line 2.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 8.27998pt on input line 2.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 6.43999pt on input line 2.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
+
+(C:\Users\ANH DUY\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
+
+(C:\Users\ANH DUY\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 2.
+
+
+(C:\Users\ANH DUY\AppData\Local\Programs\MiKTeX\tex/latex/base\ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Trying to load font information for U+esvect on input line 
+2.
+
+(C:\Users\ANH DUY\AppData\Local\Programs\MiKTeX\tex/latex/esvect\uesvect.fd
+File: uesvect.fd 
+)
+LaTeX Font Info:    Trying to load font information for TS1+futs on input line 
+2.
+
+(C:\Users\ANH DUY\AppData\Local\Programs\MiKTeX\tex/latex/fourier\ts1futs.fd
+File: ts1futs.fd 2003/09/14 Fontinst v1.801 font definitions for TS1/futs.
+))
+\tf@toc=\write6
+\openout6 = `main.toc'.
+
+
+(C:\Users\ANH DUY\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
+(C:\Users\ANH DUY\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+) (source/content/contents.tex (source/content/bai_1.tex [3] [4
+
+]
+Ch\uhorn \ohorn ng 1.
+<source/picture/chapter.png, id=89, 542.025pt x 782.925pt>
+File: source/picture/chapter.png Graphic file (type png)
+<use source/picture/chapter.png>
+Package pdftex.def Info: source/picture/chapter.png  used on input line 2.
+(pdftex.def)             Requested size: 597.52782pt x 845.09245pt.
+[5 <./source/picture/chapter.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 311--312
+
+ []
+
+Runaway argument?
+{figure}[H ] \centering \includegraphics [width=5in]{source/picture/b\ETC.
+! Paragraph ended before \@float@HH was complete.
+<to be read again> 
+                   \par 
+l.324 
+      
+? 
+<source/picture/bai_1/Proteus_sche_ex1.PNG, id=94, 748.29562pt x 483.30562pt>
+File: source/picture/bai_1/Proteus_sche_ex1.PNG Graphic file (type png)
+<use source/picture/bai_1/Proteus_sche_ex1.PNG>
+Package pdftex.def Info: source/picture/bai_1/Proteus_sche_ex1.PNG  used on inp
+ut line 328.
+(pdftex.def)             Requested size: 361.34999pt x 233.38524pt.
+! Missing $ inserted.
+<inserted text> 
+                $
+l.330 }
+       
+? 
+! Extra }, or forgotten $.
+\mbox  #1->\leavevmode \hbox {#1}
+                                 
+l.330 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.330 }
+       
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.330 }
+       
+? 
+
+Overfull \hbox (39.07272pt too wide) in paragraph at lines 330--330
+[][] 
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.330 }
+       
+? 
+! Extra }, or forgotten $.
+\mbox  #1->\leavevmode \hbox {#1}
+                                 
+l.330 }
+       
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.330 }
+       
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.330 }
+       
+? 
+
+Overfull \hbox (39.07272pt too wide) in paragraph at lines 330--330
+[][] 
+ []
+
+
+Overfull \hbox (50.84589pt too wide) in paragraph at lines 330--330
+[]\T5/futs/m/it/12 H¼nh 1.1\T5/futs/m/n/12 : []$[]$ 
+ []
+
+
+! Package xkeyval Error: `Source code for exercise 1' undefined in families `ls
+t'.
+
+See the xkeyval package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.335 ...n{lstlisting}[Source code for exercise 1]
+                                                  
+? 
+LaTeX Font Info:    Trying to load font information for T5+cmtt on input line 3
+35.
+(C:\Users\ANH DUY\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5cmtt.fd
+File: t5cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+[6{C:/Users/ANH DUY/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} 
+<./source/picture/bai_1/Proteus_sche_ex1.PNG>]
+Underfull \hbox (badness 10000) in paragraph at lines 353--354
+
+ []
+
+<source/picture/bai_1/Proteus_sche_ex2.PNG, id=115, 721.19438pt x 435.87843pt>
+File: source/picture/bai_1/Proteus_sche_ex2.PNG Graphic file (type png)
+<use source/picture/bai_1/Proteus_sche_ex2.PNG>
+Package pdftex.def Info: source/picture/bai_1/Proteus_sche_ex2.PNG  used on inp
+ut line 360.
+(pdftex.def)             Requested size: 361.34999pt x 218.39095pt.
+
+! Package xkeyval Error: `Source code for exercise 2' undefined in families `ls
+t'.
+
+See the xkeyval package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.364 ...n{lstlisting}[Source code for exercise 2]
+                                                  
+? 
+[7 <./source/picture/bai_1/Proteus_sche_ex2.PNG>]
+<source/picture/bai_1/pic2.jpg, id=136, 697.8572pt x 410.2828pt>
+File: source/picture/bai_1/pic2.jpg Graphic file (type jpg)
+<use source/picture/bai_1/pic2.jpg>
+Package pdftex.def Info: source/picture/bai_1/pic2.jpg  used on input line 394.
+
+(pdftex.def)             Requested size: 361.34999pt x 212.44678pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 400--401
+
+ []
+
+
+Underfull \vbox (badness 5563) has occurred while \output is active []
+
+ [8 <./source/picture/bai_1/pic2.jpg>]
+<source/picture/bai_1/pic3.PNG, id=157, 632.3625pt x 340.8735pt>
+File: source/picture/bai_1/pic3.PNG Graphic file (type png)
+<use source/picture/bai_1/pic3.PNG>
+Package pdftex.def Info: source/picture/bai_1/pic3.PNG  used on input line 406.
+
+(pdftex.def)             Requested size: 289.07999pt x 155.83105pt.
+ [9 <./source/picture/bai_1/pic3.PNG>]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 413.
+<source/picture/bai_1/EX3_4_sche.PNG, id=164, 746.03719pt x 569.12625pt>
+File: source/picture/bai_1/EX3_4_sche.PNG Graphic file (type png)
+<use source/picture/bai_1/EX3_4_sche.PNG>
+Package pdftex.def Info: source/picture/bai_1/EX3_4_sche.PNG  used on input lin
+e 427.
+(pdftex.def)             Requested size: 361.34999pt x 275.66116pt.
+ [10 <./source/picture/bai_1/EX3_4_sche.PNG>] [11]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12]
+<source/picture/bai_1/pic4.PNG, id=280, 203.5605pt x 198.14024pt>
+File: source/picture/bai_1/pic4.PNG Graphic file (type png)
+<use source/picture/bai_1/pic4.PNG>
+Package pdftex.def Info: source/picture/bai_1/pic4.PNG  used on input line 538.
+
+(pdftex.def)             Requested size: 216.81pt x 211.04953pt.
+<source/picture/bai_1/EX6_sche.PNG, id=281, 609.02531pt x 542.77782pt>
+File: source/picture/bai_1/EX6_sche.PNG Graphic file (type png)
+<use source/picture/bai_1/EX6_sche.PNG>
+Package pdftex.def Info: source/picture/bai_1/EX6_sche.PNG  used on input line 
+546.
+(pdftex.def)             Requested size: 361.34999pt x 322.04991pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13 <./source/picture/bai_1/pic4.PNG>]
+Underfull \vbox (badness 4303) has occurred while \output is active []
+
+ [14 <./source/picture/bai_1/EX6_sche.PNG>]
+Overfull \hbox (5.04564pt too wide) in paragraph at lines 604--605
+[]\T5/futs/m/it/12 Source code for EX6-10: []$\T5/cmtt/m/n/12 https : / / githu
+b . com / duyhoangbk23 / Microcontroller _ Lab /
+ []
+
+[15])
+Overfull \hbox (32.55518pt too wide) in paragraph at lines 606--7
+[]\T5/futs/m/it/12 Proteus schematic for EX6-10: []$\T5/cmtt/m/it/12 https : / 
+/ github . com / duyhoangbk23 / Microcontroller _
+ []
+
+) [16]
+
+! LaTeX Error: \begin{figure} on input line 317 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.184 \end{document}
+                    
+? 
+(main.aux)
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-04>
+ ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 3BDF7F56AA5EFF9073C0B206C6F1F1B3;1471.
+Package logreq Info: Writing requests to 'main.run.xml'.
+\openout1 = `main.run.xml'.
+
+ )
+(\end occurred inside a group at level 1)
+
+### semi simple group (level 1) entered at line 317 (\begingroup)
+### bottom level 
+Here is how much of TeX's memory you used:
+ 36176 strings out of 474486
+ 675889 string characters out of 5742775
+ 2252542 words of memory out of 5000000
+ 57585 multiletter control sequences out of 15000+600000
+ 614001 words of font info for 97 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 84i,12n,95p,680b,2122s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/ANH DUY/AppData/Local/Programs/MiKTeX/fonts/type1/vnt
+ex/vntopia/putb8v.pfb><C:/Users/ANH DUY/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/adobe/utopia/putr8a.pfb><C:/Users/ANH DUY/AppData/Local/Programs/MiKTeX/font
+s/type1/vntex/vntopia/putr8v.pfb><C:/Users/ANH DUY/AppData/Local/Programs/MiKTe
+X/fonts/type1/vntex/vntopia/putr8v.pfb><C:/Users/ANH DUY/AppData/Local/Programs
+/MiKTeX/fonts/type1/adobe/utopia/putri8a.pfb><C:/Users/ANH DUY/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/vntex/vntopia/putri8v.pfb><C:/Users/ANH DUY/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/vntex/vnr/vnitt10.pfb><C:/Users/ANH DUY/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vntt12.pfb>
+Output written on main.pdf (16 pages, 1522751 bytes).
+PDF statistics:
+ 426 PDF objects out of 1000 (max. 8388607)
+ 213 named destinations out of 1000 (max. 500000)
+ 154 words of extra memory for PDF output out of 10000 (max. 10000000)
+

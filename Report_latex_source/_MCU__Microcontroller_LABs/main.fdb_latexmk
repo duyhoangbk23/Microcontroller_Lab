@@ -1,12 +1,11 @@
 # Fdb version 4
-["biber main"] 1758052862.22292 "main.bcf" "main.bbl" "main" 1758052893.4206 0
-  "main.bcf" 1758052893 107261 16272f6ca2a837b53bcaf82d099e296b "pdflatex"
-  "references.bib" 1757525224 2171 f105b022f9b8e6cbdd5fad112312d554 ""
+["biber main"] 1758267207.61984 "main.bcf" "main.bbl" "main" 1758267568.40792 2
+  "main.bcf" 1758267567 107261 16272f6ca2a837b53bcaf82d099e296b "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1758052890.77324 "d:/ADUY/251/VXL_VDK/_MCU__Microcontroller_LABs/main.tex" "main.pdf" "main" 1758052893.42119 2
+["pdflatex"] 1758267564.21899 "d:/ADUY/251/VXL_VDK/_MCU__Microcontroller_LABs/main.tex" "main.pdf" "main" 1758267568.40944 2
   "Book.cls" 1757525224 24293 873837a3a15d59fe3135b74ed838afe6 ""
   "C:/Users/ANH DUY/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1757839013 91916 47d4874ac1055e9f730a7c702fd5c20e ""
   "C:/Users/ANH DUY/AppData/Local/MiKTeX/fonts/tfm/public/esvect/vect10.tfm" 1757614851 372 07da2e555f4c8dac959d0bb59cacb4dc ""
@@ -39,6 +38,7 @@
   "C:/Users/ANH DUY/AppData/Local/Programs/MiKTeX/fonts/tfm/public/latex-fonts/lasy7.tfm" 1136765053 520 a74c6ed8cb48679fdc3ea874d9d34a7e ""
   "C:/Users/ANH DUY/AppData/Local/Programs/MiKTeX/fonts/tfm/public/latex-fonts/lasy9.tfm" 1136765053 520 1cc7cc05f4d7bae5c23bf7516f88fa52 ""
   "C:/Users/ANH DUY/AppData/Local/Programs/MiKTeX/fonts/tfm/public/tabvar/tabvar.tfm" 1358871298 724 0c9ec3f897937c6cd41de1773f76db6b ""
+  "C:/Users/ANH DUY/AppData/Local/Programs/MiKTeX/fonts/tfm/vntex/vnr/vnitt10.tfm" 1644004041 1396 2087251ab3f27f74ec1e235b37021ec4 ""
   "C:/Users/ANH DUY/AppData/Local/Programs/MiKTeX/fonts/tfm/vntex/vnr/vntt12.tfm" 1644004041 1340 06553ed104adbb36180126e32f8c640c ""
   "C:/Users/ANH DUY/AppData/Local/Programs/MiKTeX/fonts/tfm/vntex/vntopia/putb8v.tfm" 1163940859 10544 0318339acd4215765759b829ab51eb80 ""
   "C:/Users/ANH DUY/AppData/Local/Programs/MiKTeX/fonts/tfm/vntex/vntopia/putr8v.tfm" 1163940859 10832 e5e684809443f0503b3d64ac90b1e77a ""
@@ -46,6 +46,7 @@
   "C:/Users/ANH DUY/AppData/Local/Programs/MiKTeX/fonts/tfm/vntex/vntopia/putro8v.tfm" 1163940859 11016 9c8aa8390127eade04432a64a0021da3 ""
   "C:/Users/ANH DUY/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putr8a.pfb" 808411246 36350 104fe5297af6bd60b05aac7d5588dbc3 ""
   "C:/Users/ANH DUY/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putri8a.pfb" 808411246 37599 e8ddea9c2cc4dc899893aaab2072ac65 ""
+  "C:/Users/ANH DUY/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnitt10.pfb" 1644004041 43956 90692cd137ee3264107603c8b3941b93 ""
   "C:/Users/ANH DUY/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vntt12.pfb" 1644004041 40832 4a1109db0219898270ca9c4c2fdb38d4 ""
   "C:/Users/ANH DUY/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vntopia/putb8v.pfb" 1163940859 61681 1437d4f9fbe24b3502f62341c6cb2cd6 ""
   "C:/Users/ANH DUY/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vntopia/putr8v.pfb" 1163940859 60753 46070e17a36731b8bd501123b466a79e ""
@@ -258,13 +259,13 @@
   "C:/Users/ANH DUY/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "C:/Users/ANH DUY/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "d:/ADUY/251/VXL_VDK/_MCU__Microcontroller_LABs/main.tex" 1757839006 4715 1be722124756f0bcf5bdbec983a97c7b ""
-  "main.aux" 1758052893 3709 e66bb0957555ae7873688f91d1aa0c3c "pdflatex"
-  "main.bbl" 1758052864 0 d41d8cd98f00b204e9800998ecf8427e "biber main"
-  "main.out" 1758052893 1471 3bdf7f56aa5eff9073c0b206c6f1f1b3 "pdflatex"
+  "main.aux" 1758267567 3709 e66bb0957555ae7873688f91d1aa0c3c "pdflatex"
+  "main.bbl" 0 -1 0 "biber main"
+  "main.out" 1758267567 1471 3bdf7f56aa5eff9073c0b206c6f1f1b3 "pdflatex"
   "main.tex" 1757839006 4715 1be722124756f0bcf5bdbec983a97c7b ""
-  "main.toc" 1758052893 951 325769b9616d30f92dc520ad0ac642dd "pdflatex"
+  "main.toc" 1758267567 951 325769b9616d30f92dc520ad0ac642dd "pdflatex"
   "preamble.tex" 1757525224 67 1439b471b23710f413a1d79c8f928136 ""
-  "source/content/bai_1.tex" 1758052886 24719 e9a4f319765a75523b3d1e3c3ee65e30 ""
+  "source/content/bai_1.tex" 1758267558 24981 50a70c045efa35cbbd70a1f431753534 ""
   "source/content/contents.tex" 1757790393 390 e100f627b01c031227bb6e2e774d070f ""
   "source/picture/bai_1/EX3_4_sche.PNG" 1757992962 56960 51735ad9f9128abd11a32ffaf6c59e53 ""
   "source/picture/bai_1/EX6_sche.PNG" 1758047870 49372 1333727c3a414275e6bb630f1c776aae ""
