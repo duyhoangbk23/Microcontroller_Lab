@@ -111,14 +111,13 @@ int main(void)
   void Testing_Ex_7_8_9(){ // For testing EX7,8,9
   	for (int i = 0; i < 12; i++) { //Turn on and off and on each led then turn off all leds
       	setNumberOnClock(i);     // test EX8
-      	HAL_Delay(200);
+      	HAL_Delay(300);
       	clearNumberOnClock(i);   // test EX9
-      	HAL_Delay(200);
+      	HAL_Delay(300);
       	setNumberOnClock(i);
-      	HAL_Delay(200);
   	}
   	clearAllClock(); //test EX7
-  	HAL_Delay(200);
+  	HAL_Delay(1000);
 }
   /* USER CODE END 2 */
 
@@ -126,8 +125,8 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   int first_time = 1;
   // input for hour, minute, second
-  int hour = 0;
-  int minute = 0;
+  int hour = 3;
+  int minute = 30;
   int second = 0;
 
   while (1)
@@ -154,24 +153,23 @@ int main(void)
 //------------------------------------------
 //---------------EX10-----------------------
 
-	  setNumberOnClock(hour /5  % 12);   // Hour LED
-	  setNumberOnClock(minute / 5 % 12); // Minute LED
-	  setNumberOnClock(second / 5 % 12); // Second LED
+	  clearAllClock();
+
+	  setNumberOnClock(hour % 12);   // Hour LED
+	  setNumberOnClock(minute % 12); // Minute LED
+	  setNumberOnClock(second % 12); // Second LED
 
 	  // Step 3: Wait 1s
-	  HAL_Delay(200);
+	  HAL_Delay(1000);
 
 
 	  // Step 4: Update time
-	  clearNumberOnClock(second / 5 % 12);
 	  second++;
 	  if (second >= 60) {
 	      second = 0;
-	      clearNumberOnClock(minute / 5 % 12);
 	      minute++;
 	      if (minute >= 60) {
 	          minute = 0;
-	          clearNumberOnClock(hour / 5 % 12);
 	          hour++;
 	          if (hour >= 12) {
 	        	  hour = 0;

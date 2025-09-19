@@ -3,6 +3,6 @@ main.c:64:5:main	32	static
 main.c:99:8:setNumberOnClock	16	static
 main.c:106:8:clearNumberOnClock	16	static
 main.c:111:8:Testing_Ex_7_8_9	32	static
-main.c:191:6:SystemClock_Config	72	static
-main.c:227:13:MX_GPIO_Init	32	static
-main.c:260:6:Error_Handler	4	static,ignoring_inline_asm
+main.c:193:6:SystemClock_Config	72	static
+main.c:229:13:MX_GPIO_Init	32	static
+main.c:262:6:Error_Handler	4	static,ignoring_inline_asm
