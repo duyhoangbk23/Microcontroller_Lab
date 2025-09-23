@@ -1,21 +1,21 @@
 /* USER CODE BEGIN Header */
 /**
-  ******************************************************************************
-  * @file           : main.c
-  * @brief          : Main program body
-  ******************************************************************************
-  * @attention
-  *
-  * <h2><center>&copy; Copyright (c) 2025 STMicroelectronics.
-  * All rights reserved.</center></h2>
-  *
-  * This software component is licensed by ST under BSD 3-Clause license,
-  * the "License"; You may not use this file except in compliance with the
-  * License. You may obtain a copy of the License at:
-  *                        opensource.org/licenses/BSD-3-Clause
-  *
-  ******************************************************************************
-  */
+ ******************************************************************************
+ * @file           : main.c
+ * @brief          : Main program body
+ ******************************************************************************
+ * @attention
+ *
+ * <h2><center>&copy; Copyright (c) 2025 STMicroelectronics.
+ * All rights reserved.</center></h2>
+ *
+ * This software component is licensed by ST under BSD 3-Clause license,
+ * the "License"; You may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at:
+ *                        opensource.org/licenses/BSD-3-Clause
+ *
+ ******************************************************************************
+ */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
@@ -86,103 +86,100 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
-  //EX6 to EX9 function
+	//EX6 to EX9 function
+	//EX7: Clear all clock
+	void clearAllClock() {
+		for (int i = 4; i <= 15; i++) {
+			HAL_GPIO_WritePin(GPIOA, (1 << i), GPIO_PIN_RESET); // Turn off all leds
+		}
+	}
 
-  //EX7: Clear all clock
-  void clearAllClock() {
-  	  for (int i = 4; i <= 15; i++) {
-  	      HAL_GPIO_WritePin(GPIOA, (1 << i), GPIO_PIN_RESET);// Turn off all leds
-  	  }
-  }
+	//EX8: Set number on clock
+	void setNumberOnClock(int num) { //Turn on led on Num
+		if (num < 0 || num > 11)
+			return; // safety check
 
-  //EX8: Set number on clock
-  void setNumberOnClock(int num) { //Turn on led on Num
-      if (num < 0 || num > 11) return; // safety check
+		// Each LED corresponds to PA(num+4) due to PA4 is the begin Pin
+		HAL_GPIO_WritePin(GPIOA, (1 << (num + 4)), GPIO_PIN_SET);
+	}
+	//EX9: Clear number on clock
+	void clearNumberOnClock(int num) { // Turn off led on Num
+		if (num < 0 || num > 11)
+			return;
 
-      // Each LED corresponds to PA(num+4) due to PA4 is the begin Pin
-      HAL_GPIO_WritePin(GPIOA, (1 << (num + 4)), GPIO_PIN_SET);
-  }
-  //EX9: Clear number on clock
-  void clearNumberOnClock(int num) { // Turn off led on Num
-      if (num < 0 || num > 11) return;
-
-      HAL_GPIO_WritePin(GPIOA, (1 << (num + 4)), GPIO_PIN_RESET);
-  }
-  void Testing_Ex_7_8_9(){ // For testing EX7,8,9
-  	for (int i = 0; i < 12; i++) { //Turn on and off and on each led then turn off all leds
-      	setNumberOnClock(i);     // test EX8
-      	HAL_Delay(200);
-      	clearNumberOnClock(i);   // test EX9
-      	HAL_Delay(200);
-      	setNumberOnClock(i);
-      	HAL_Delay(200);
-  	}
-  	clearAllClock(); //test EX7
-  	HAL_Delay(200);
-}
+		HAL_GPIO_WritePin(GPIOA, (1 << (num + 4)), GPIO_PIN_RESET);
+	}
+	void Testing_Ex_7_8_9() { // For testing EX7,8,9
+		for (int i = 0; i < 12; i++) { //Turn on and off and on each led then turn off all leds
+			setNumberOnClock(i);     // test EX8
+			HAL_Delay(200);
+			clearNumberOnClock(i);   // test EX9
+			HAL_Delay(200);
+			setNumberOnClock(i);
+			HAL_Delay(200);
+		}
+		clearAllClock(); //test EX7
+		HAL_Delay(200);
+	}
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  int first_time = 1;
-  // input for hour, minute, second
-  int hour = 0;
-  int minute = 0;
-  int second = 0;
+	int first_time = 1;
+	// input for hour, minute, second
+	int hour = 0;
+	int minute = 0;
+	int second = 0;
 
-  while (1)
-  {
+	while (1) {
 //----------------TESTING--------------------
-	  if (first_time==1)
-	  {
+		if (first_time == 1) {
 //EX6 : Testing connection
-	  for (int i = 4; i <= 15; i++)
-	  {
-		  // Turn ON current LED
-		  HAL_GPIO_WritePin(GPIOA, (1 << i), GPIO_PIN_SET);
-		  HAL_Delay(200);
-		  // Turn OFF current LED
-		  HAL_GPIO_WritePin(GPIOA, (1 << i), GPIO_PIN_RESET);
-	  }
+			for (int i = 4; i <= 15; i++) {
+				// Turn ON current LED
+				HAL_GPIO_WritePin(GPIOA, (1 << i), GPIO_PIN_SET);
+				HAL_Delay(200);
+				// Turn OFF current LED
+				HAL_GPIO_WritePin(GPIOA, (1 << i), GPIO_PIN_RESET);
+			}
 
 //Testing EX 7, 8, 9:
 
-	  Testing_Ex_7_8_9();
-	  first_time=0;
-	  }
+			Testing_Ex_7_8_9();
+			first_time = 0;
+		}
 
 //------------------------------------------
 //---------------EX10-----------------------
 
-	  setNumberOnClock(hour /5  % 12);   // Hour LED
-	  setNumberOnClock(minute / 5 % 12); // Minute LED
-	  setNumberOnClock(second / 5 % 12); // Second LED
+		setNumberOnClock(hour / 5 % 12);   // Hour LED
+		setNumberOnClock(minute / 5 % 12); // Minute LED
+		setNumberOnClock(second / 5 % 12); // Second LED
 
-	  // Step 3: Wait 1s
-	  HAL_Delay(200);
+		// Step 3: Wait 1s
+		HAL_Delay(200);
 
-
-	  // Step 4: Update time
-	  clearNumberOnClock(second / 5 % 12);
-	  second++;
-	  if (second >= 60) {
-	      second = 0;
-	      clearNumberOnClock(minute / 5 % 12);
-	      minute++;
-	      if (minute >= 60) {
-	          minute = 0;
-	          clearNumberOnClock(hour / 5 % 12);
-	          hour++;
-	          if (hour >= 12) {
-	        	  hour = 0;
-	          }
-	      }
-	   }
+		// Step 4: Update time
+		clearNumberOnClock(second / 5 % 12);
+		second++;
+		if (second >= 60) {
+			second = 0;
+			clearNumberOnClock(minute / 5 % 12);
+			minute++;
+			if (minute >= 60) {
+				minute = 0;
+				clearNumberOnClock(hour / 5 % 12);
+				hour++;
+				if (hour >= 12) {
+					hour = 0;
+				}
+			}
+		}
 
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-  }
+	}
   /* USER CODE END 3 */
 }
 
@@ -262,11 +259,10 @@ static void MX_GPIO_Init(void)
 void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
-  /* User can add his own implementation to report the HAL error return state */
-  __disable_irq();
-  while (1)
-  {
-  }
+	/* User can add his own implementation to report the HAL error return state */
+	__disable_irq();
+	while (1) {
+	}
   /* USER CODE END Error_Handler_Debug */
 }
 
