@@ -112,14 +112,14 @@ int main(void)
 	void Testing_Ex_7_8_9() { // For testing EX7,8,9
 		for (int i = 0; i < 12; i++) { //Turn on and off and on each led then turn off all leds
 			setNumberOnClock(i);     // test EX8
-			HAL_Delay(200);
+			HAL_Delay(50);
 			clearNumberOnClock(i);   // test EX9
-			HAL_Delay(200);
+			HAL_Delay(50);
 			setNumberOnClock(i);
-			HAL_Delay(200);
+			HAL_Delay(50);
 		}
 		clearAllClock(); //test EX7
-		HAL_Delay(200);
+		HAL_Delay(100);
 	}
   /* USER CODE END 2 */
 
@@ -138,7 +138,7 @@ int main(void)
 			for (int i = 4; i <= 15; i++) {
 				// Turn ON current LED
 				HAL_GPIO_WritePin(GPIOA, (1 << i), GPIO_PIN_SET);
-				HAL_Delay(200);
+				HAL_Delay(50);
 				// Turn OFF current LED
 				HAL_GPIO_WritePin(GPIOA, (1 << i), GPIO_PIN_RESET);
 			}
@@ -157,7 +157,7 @@ int main(void)
 		setNumberOnClock(second / 5 % 12); // Second LED
 
 		// Step 3: Wait 1s
-		HAL_Delay(200);
+		HAL_Delay(50);
 
 		// Step 4: Update time
 		clearNumberOnClock(second / 5 % 12);

@@ -171,8 +171,8 @@ int main(void)
  80001cc:	4619      	mov	r1, r3
  80001ce:	4862      	ldr	r0, [pc, #392]	; (8000358 <main+0x1cc>)
  80001d0:	f000 fd12 	bl	8000bf8 <HAL_GPIO_WritePin>
-				HAL_Delay(200);
- 80001d4:	20c8      	movs	r0, #200	; 0xc8
+				HAL_Delay(50);
+ 80001d4:	2032      	movs	r0, #50	; 0x32
  80001d6:	f000 fa8d 	bl	80006f4 <HAL_Delay>
 				// Turn OFF current LED
 				HAL_GPIO_WritePin(GPIOA, (1 << i), GPIO_PIN_RESET);
@@ -272,8 +272,8 @@ int main(void)
  800028c:	f000 f86a 	bl	8000364 <setNumberOnClock.5435>
 
 		// Step 3: Wait 1s
-		HAL_Delay(200);
- 8000290:	20c8      	movs	r0, #200	; 0xc8
+		HAL_Delay(50);
+ 8000290:	2032      	movs	r0, #50	; 0x32
  8000292:	f000 fa2f 	bl	80006f4 <HAL_Delay>
 
 		// Step 4: Update time
@@ -460,22 +460,22 @@ int main(void)
  80003ee:	46a4      	mov	ip, r4
  80003f0:	68f8      	ldr	r0, [r7, #12]
  80003f2:	f7ff ffb7 	bl	8000364 <setNumberOnClock.5435>
-			HAL_Delay(200);
- 80003f6:	20c8      	movs	r0, #200	; 0xc8
+			HAL_Delay(50);
+ 80003f6:	2032      	movs	r0, #50	; 0x32
  80003f8:	f000 f97c 	bl	80006f4 <HAL_Delay>
 			clearNumberOnClock(i);   // test EX9
  80003fc:	46a4      	mov	ip, r4
  80003fe:	68f8      	ldr	r0, [r7, #12]
  8000400:	f7ff ffce 	bl	80003a0 <clearNumberOnClock.5438>
-			HAL_Delay(200);
- 8000404:	20c8      	movs	r0, #200	; 0xc8
+			HAL_Delay(50);
+ 8000404:	2032      	movs	r0, #50	; 0x32
  8000406:	f000 f975 	bl	80006f4 <HAL_Delay>
 			setNumberOnClock(i);
  800040a:	46a4      	mov	ip, r4
  800040c:	68f8      	ldr	r0, [r7, #12]
  800040e:	f7ff ffa9 	bl	8000364 <setNumberOnClock.5435>
-			HAL_Delay(200);
- 8000412:	20c8      	movs	r0, #200	; 0xc8
+			HAL_Delay(50);
+ 8000412:	2032      	movs	r0, #50	; 0x32
  8000414:	f000 f96e 	bl	80006f4 <HAL_Delay>
 		for (int i = 0; i < 12; i++) { //Turn on and off and on each led then turn off all leds
  8000418:	68fb      	ldr	r3, [r7, #12]
@@ -487,8 +487,8 @@ int main(void)
 		clearAllClock(); //test EX7
  8000424:	46a4      	mov	ip, r4
  8000426:	f7ff fe91 	bl	800014c <clearAllClock.5428>
-		HAL_Delay(200);
- 800042a:	20c8      	movs	r0, #200	; 0xc8
+		HAL_Delay(100);
+ 800042a:	2064      	movs	r0, #100	; 0x64
  800042c:	f000 f962 	bl	80006f4 <HAL_Delay>
 	}
  8000430:	bf00      	nop

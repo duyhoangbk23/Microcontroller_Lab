@@ -113,8 +113,8 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  int counter = 9;
-  int phase = 0;  // 0: Road1 RED, Road2 GREEN->YELLOW
+  int counter = 5;
+  int phase = 1;  // 0: Road1 RED, Road2 GREEN->YELLOW
                   // 1: Road2 RED, Road1 GREEN->YELLOW
 
   while (1)
@@ -125,30 +125,34 @@ int main(void)
       HAL_GPIO_WritePin(GPIOA, RED1_Pin|YELLOW1_Pin|GREEN1_Pin|
                                RED2_Pin|YELLOW2_Pin|GREEN2_Pin, GPIO_PIN_RESET);
 
-      if (phase == 0) {
-          // Road1 always RED
+      if (phase) {
+          // turn on RED_1
           HAL_GPIO_WritePin(GPIOA, RED1_Pin, GPIO_PIN_SET);
+          HAL_GPIO_WritePin(GPIOA, GREEN2_Pin, GPIO_PIN_SET);
 
-          if (counter > 4) HAL_GPIO_WritePin(GPIOA, GREEN2_Pin, GPIO_PIN_SET);    // Green
-          else if (counter > 1) HAL_GPIO_WritePin(GPIOA, YELLOW2_Pin, GPIO_PIN_SET); // Yellow
-          else HAL_GPIO_WritePin(GPIOA, RED2_Pin, GPIO_PIN_SET);                  // Switch RED
-      } else {
-          // Road2 always RED
+          if (counter <= 2) {
+        	  HAL_GPIO_WritePin(GPIOA, YELLOW2_Pin, GPIO_PIN_SET); // Turn on Yellow 2
+        	  HAL_GPIO_WritePin(GPIOA, GREEN2_Pin, GPIO_PIN_RESET);// Turn off green 2
+          }
+      }
+      else {
+    	  //Turn on red 2
           HAL_GPIO_WritePin(GPIOA, RED2_Pin, GPIO_PIN_SET);
+          HAL_GPIO_WritePin(GPIOA, GREEN1_Pin, GPIO_PIN_SET);
 
-          if (counter > 4) HAL_GPIO_WritePin(GPIOA, GREEN1_Pin, GPIO_PIN_SET);    // Green
-          else if (counter > 1) HAL_GPIO_WritePin(GPIOA, YELLOW1_Pin, GPIO_PIN_SET); // Yellow
-          else HAL_GPIO_WritePin(GPIOA, RED1_Pin, GPIO_PIN_SET);                  // Switch RED
+          if (counter <= 2) {
+        	  HAL_GPIO_WritePin(GPIOA, YELLOW1_Pin, GPIO_PIN_SET); // Turn on Yellow 1
+        	  HAL_GPIO_WritePin(GPIOA, GREEN1_Pin, GPIO_PIN_RESET);// Turn off green 1
+          }
       }
 
       HAL_Delay(1000);
 
       // Countdown
-      if (counter <= 0) {
-          counter = 9;
-          phase = !phase; // change road
-      } else {
-          counter--;
+      counter --;
+      if (counter <0){
+    	  counter =5;
+    	  phase=!phase;
       }
     /* USER CODE END WHILE */
 
