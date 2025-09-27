@@ -199,9 +199,9 @@ int main(void)
  8000204:	481f      	ldr	r0, [pc, #124]	; (8000284 <main+0xcc>)
  8000206:	f000 fc3f 	bl	8000a88 <HAL_GPIO_WritePin>
 
-          if (counter <= 2) {
+          if (counter < 2) {
  800020a:	68fb      	ldr	r3, [r7, #12]
- 800020c:	2b02      	cmp	r3, #2
+ 800020c:	2b01      	cmp	r3, #1
  800020e:	dc24      	bgt.n	800025a <main+0xa2>
         	  HAL_GPIO_WritePin(GPIOA, YELLOW2_Pin, GPIO_PIN_SET); // Turn on Yellow 2
  8000210:	2201      	movs	r2, #1
@@ -229,9 +229,9 @@ int main(void)
  800023a:	4812      	ldr	r0, [pc, #72]	; (8000284 <main+0xcc>)
  800023c:	f000 fc24 	bl	8000a88 <HAL_GPIO_WritePin>
 
-          if (counter <= 2) {
+          if (counter < 2) {
  8000240:	68fb      	ldr	r3, [r7, #12]
- 8000242:	2b02      	cmp	r3, #2
+ 8000242:	2b01      	cmp	r3, #1
  8000244:	dc09      	bgt.n	800025a <main+0xa2>
         	  HAL_GPIO_WritePin(GPIOA, YELLOW1_Pin, GPIO_PIN_SET); // Turn on Yellow 1
  8000246:	2201      	movs	r2, #1

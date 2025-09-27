@@ -130,7 +130,7 @@ int main(void)
           HAL_GPIO_WritePin(GPIOA, RED1_Pin, GPIO_PIN_SET);
           HAL_GPIO_WritePin(GPIOA, GREEN2_Pin, GPIO_PIN_SET);
 
-          if (counter <= 2) {
+          if (counter < 2) {
         	  HAL_GPIO_WritePin(GPIOA, YELLOW2_Pin, GPIO_PIN_SET); // Turn on Yellow 2
         	  HAL_GPIO_WritePin(GPIOA, GREEN2_Pin, GPIO_PIN_RESET);// Turn off green 2
           }
@@ -140,7 +140,7 @@ int main(void)
           HAL_GPIO_WritePin(GPIOA, RED2_Pin, GPIO_PIN_SET);
           HAL_GPIO_WritePin(GPIOA, GREEN1_Pin, GPIO_PIN_SET);
 
-          if (counter <= 2) {
+          if (counter < 2) {
         	  HAL_GPIO_WritePin(GPIOA, YELLOW1_Pin, GPIO_PIN_SET); // Turn on Yellow 1
         	  HAL_GPIO_WritePin(GPIOA, GREEN1_Pin, GPIO_PIN_RESET);// Turn off green 1
           }
